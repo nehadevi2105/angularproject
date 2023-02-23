@@ -1,0 +1,105 @@
+<!--navbar use for responsive collapsing and color scheme-->
+<nav class="navbar navbar-light bg-primary">
+  <!-- this provided full widhth -->
+  <div class="container-fluid">
+    <!--this is heading tag -->
+       <h1 style="color:aliceblue;">ANGULAR CRUD </h1>
+       <!--this is like a container use for responsive page -->
+      <div class="d-flex">
+        <!--this is button tag use for button , data-bs-toggle- use for collapsing working model-->
+          <button  type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="clickAddemployee()" class="btn btn-success">add employee</button>
+         <button routerLink="/login" class="btn.btn-danger mx-2">logout</button>
+
+      </div>
+
+       
+    </div>
+</nav>    <!--here i create a table  for employee details by using bootstrap table -->
+    <table class="table mt-3">
+      <!--this is head part of table-->
+        <thead>
+            <tr>
+              <!--these are rows -->
+                <th scope="col">employeeId </th>
+                <th scope="col">firstname </th>
+                <th scope="col">lastname</th>
+                <th scope="col">emailid </th>
+                <th scope="col">mobileno</th>
+                <th scope="col">salary</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+       <!--this is body part -->
+        <tbody>
+          <!--ngfor is directive in angular-->
+            <tr *ngFor="let row of employeeData">
+              <!--interpolation -->
+                <td>{{row.employeeId}}</td>
+                <td>{{row.firstname}}</td>
+                <td>{{row.lastname}}</td>
+                <td>{{row.emailid}}</td>
+                <td>{{row.mobileno}}</td>
+                <td>{{row.salary}}</td>
+                <td><!--this is action part i have take two action edit and delete-->
+                  <!--here using bootstrap -->
+                    <button (click)="onEdit(row)"style="color:aliceblue;"type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-info">Edit</button>
+                    <button (click)=" deleteEmployee(row)"class="btn btn-danger mx-3">delete</button>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+
+  
+      
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">employee details </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!--this is form tag for creating form page and go to employee dashboard.ts component  -->
+          <!--here using to bind data formvalue -->
+            <form [formGroup]="formvalue">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">firstname </label>
+                  <input type="text" formControlName="firstname"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <!--import reactiveform maodule in app.module.ts component for formcontrolName and go to ap.module.ts component -->
+                </div>
+                <div class="mb-3">
+                  <label  class="form-label">lastname </label>
+                  <input type="text" formControlName="lastname"class="form-control" >
+                </div>
+               
+                <div class="mb-3">
+                    <label  class="form-label">EmailID </label>
+                    <input type="email" formControlName="emailid"class="form-control" >
+                </div>
+                 
+                <div class="mb-3">
+                    <label  class="form-label">Mobile no </label>
+                    <input type="text" formControlName ="mobileno"class="form-control" >
+                </div>
+                   
+                <div class="mb-3">
+                    <label  class="form-label">salary </label>
+                    <input type="text"formControlName="salary" class="form-control" >
+                </div>
+
+
+            </form>     
+                 
+           
+        </div>
+        <div class="modal-footer">
+          <button type="button"id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" *ngIf="showAdd" (click)="Postemployeedetails()"class="btn btn-primary">ADD</button>
+          <button type="button" *ngIf="showUpdate"  (click)="updateemployeedetails()"class="btn btn-primary">UPDATE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+

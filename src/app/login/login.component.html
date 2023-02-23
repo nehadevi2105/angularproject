@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>login</h1>
+                    <h6>please enter your email and password</h6>
+                </div>
+                        <form [formGroup]="loginForm" (ngSubmit)="login()" >
+                            
+                            <div class="formGroup">
+                              <label for="exampleInputemail" >emailaddress </label>
+                              <input  type="text" formControlName="emailaddress" class="form-control" id="exampleInputemail" are-describedby="emailHelp" placeholder=" enter email ">
+                              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> <br>
+                              
+                              <span class="text-danger" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')"> *Email Id required</span>
+  
+                            </div>
+                            
+                            <div class="formGroup">
+                                <label for="exampleInputPassword1" class="form-label" >Password</label>
+                                <input formControlName="Password" type="password" class="form-control"  placeholder="enter password">
+                                <span class="text-danger" *ngIf="loginForm.controls['Password'].dirty && loginForm.hasError('required','Password')">* password required</span>
+  
+                          </div>
+                              
+                            
+                              
+                            <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary mt-3">login</button>                  
+                       
+                        </form>
+                        <!--where router allow to connect one component to another component-->
+                        <a routerLink="/signup" style="float: right; color:dodgerblue;" > new user ? click to signup</a>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form [formGroup]= "signupForm" (ngSubmit)="signup()" >
+            <div class="card">
+                <div class="text-center">
+                    <h1>signup</h1>
+                    <h6>register yourself</h6>
+                </div>
+                       
+                            <div class="mb-3">
+                              <label  class="form-label">fullname </label>
+                              <input formControlName="fullname"type="text" class="form-control"  aria-describedby="emailHelp" placeholder="fullname"/>
+                              <span class="text-danger" *ngIf="signupForm.controls['fullname'].dirty && signupForm.hasError('required','fullname')"> *fullname Id required</span>
+                            </div>
+                            <div class="mb-3">
+                              <label  class="form-label" >emailaddress</label>
+                              <input formControlName="emailaddress" type="text" class="form-control"  placeholder="email"/>
+                              <span class="text-danger" *ngIf="signupForm.controls['username'].dirty && signupForm.hasError('required','username')"> *email Id required</span>
+
+                            </div>
+                            <div class="mb-3">
+                                <label  class="form-label" >mobileno</label>
+                                <input formControlName="mobileno" type="number" class="form-control"  placeholder="mobile"/>
+                                <span class="text-danger" *ngIf="signupForm.controls['mobileno'].dirty && signupForm.hasError('required','mobileno')"> *mobileno Id required</span>
+
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" >Password</label>
+                                <input formControlName="Password" type="Password" class="form-control" placeholder="Password"/>
+                                <span class="text-danger" *ngIf="signupForm.controls['Password'].dirty && signupForm.hasError('required','Password')"> *Password Id required</span>
+
+                          </div>
+                          <DIV class="form-group mt-2">
+                            <label class="form-label" >usertype </label>
+                            <select formControlName="usertype" class="form-select" aria-label="Default select example">
+                                <option selected value="" >select User type</option>
+                                <option value="Admin">Admin</option>
+                                <option value="Employee">Employee</option>
+                              
+                              </select>
+                              <span class="text-danger" *ngIf="signupForm.controls['usertype'].dirty && signupForm.hasError('required','usertype')"> * usertype is required</span>
+
+                          </DIV>
+                              <br>
+                            
+                              <div>
+                                 <button type="submit" class="btn btn-primary mb-2">signup</button>       
+                                 <!-- <button type="submit"  class="btn btn-primary mb-2">signup</button>                   -->
+                                           
+                                </div>
+                       
+                        <!--where router allow to connect one component to another component-->
+                        
+                        <a routerLink="/login" style="float: right; color:dodgerblue;" >already register? click to Login!!</a>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

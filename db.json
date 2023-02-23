@@ -1,0 +1,147 @@
+{
+  "posts": [
+    {
+      "id": 10,
+      "firstname": "nehsahu",
+      "lastname": "sahu",
+      "emailid": "123@gamil.com",
+      "mobileno": "2868324755621",
+      "salary": "34000"
+    },
+    {
+      "id": 12,
+      "firstname": " jrtyiki",
+      "lastname": "bvctyuhj",
+      "emailid": "vipultiwari6880@gmail.com",
+      "mobileno": "9026653219",
+      "salary": "876542"
+    },
+    {
+      "id": 13,
+      "firstname": "beenu",
+      "lastname": "sahu",
+      "emailid": "maskhkol@gamil.com",
+      "mobileno": "12178865321",
+      "salary": "46652"
+    }
+  ],
+  "signupUsers": [
+    {
+      "email": "",
+      "password": "",
+      "id": 1
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": 2
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": 3
+    },
+    {
+      "fullname": "",
+      "email": "",
+      "mobileno": "",
+      "password": "",
+      "id": 4
+    },
+    {
+      "fullname": "",
+      "email": "",
+      "mobileno": "",
+      "password": "",
+      "id": 5
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": 6
+    },
+    {
+      "fullname": "",
+      "email": "",
+      "mobileno": "",
+      "password": "",
+      "id": 7
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": 8
+    },
+    {
+      "fullname": "",
+      "email": "",
+      "mobileno": "",
+      "password": "",
+      "id": 9
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": 10
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": 11
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": 12
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": 13
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": 14
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": 15
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": 16
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": 17
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": 18
+    },
+    {
+      "fullname": "neha",
+      "username": "",
+      "mobileno": 42168532,
+      "Password": "1234",
+      "usertype": "Employee",
+      "id": 19
+    },
+    {
+      "fullname": "sagu",
+      "username": "",
+      "mobileno": 9026653219,
+      "Password": "1234",
+      "usertype": "Employee",
+      "id": 20
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
